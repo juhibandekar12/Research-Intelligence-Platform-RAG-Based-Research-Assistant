@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Databases & Storage
+*.db
+*.db-shm
+*.db-wal
+uploads/
+chroma_db/
+reports/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Generated Vite temporary files
+frontend/*.timestamp-*.mjs

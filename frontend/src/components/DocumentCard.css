@@ -1,0 +1,119 @@
+.doc-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.doc-card:hover {
+  border-color: var(--color-border-active);
+  box-shadow: var(--shadow-primary);
+}
+
+.doc-card.selected {
+  border-color: var(--color-primary);
+  background: rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.doc-card.selectable { user-select: none; }
+
+.doc-card-checkbox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  transition: all var(--transition-fast);
+}
+
+.doc-card-checkbox.checked {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: white;
+}
+
+.doc-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.doc-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.doc-card-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.doc-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.doc-card-error {
+  font-size: 0.75rem;
+  color: var(--color-red-light);
+  background: rgba(239, 68, 68, 0.08);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.doc-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.doc-card-delete {
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  color: var(--color-red-light) !important;
+}
+
+.doc-card:hover .doc-card-delete { opacity: 1; }
+
+.doc-card-processing-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary));
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

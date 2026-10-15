@@ -1,0 +1,67 @@
+.library-upload-section {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.library-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.library-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+}
+
+.library-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.library-search {
+  padding-left: 38px !important;
+}
+
+.library-filter-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.library-filter-tab {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.library-filter-tab:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.library-filter-tab.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: var(--color-primary-light);
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}

@@ -1,0 +1,37 @@
+# FastAPI & Server
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# Database
+sqlalchemy==2.0.30
+aiosqlite==0.20.0
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# AI / LLM / Embeddings
+# Use google-generativeai 0.5.x to be compatible with langchain-google-genai 1.0.x
+google-generativeai>=0.5.2,<0.6.0
+langchain==0.2.5
+langchain-google-genai==1.0.6
+langchain-community==0.2.5
+
+# Vector Store
+chromadb==0.5.3
+
+# PDF Processing
+pymupdf==1.24.5
+
+# Report Generation
+reportlab==4.2.2
+markdown2==2.4.13
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.7.3
+pydantic-settings==2.3.1
+httpx==0.27.0
+aiofiles==23.2.1
+tenacity==8.3.0
